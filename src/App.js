@@ -8,29 +8,15 @@ import EmployeeDetail from './components/EmployeeDetail';
 import './App.css'; 
 
 function App() {
+  const isAuthenticated = false;
+
   return (
     <Router>
       <div>
-        <nav>
-          <div className="navbar-left">
-            <h1>My React App</h1>
-          </div>
-          <ul className="navbar-right">
-            <li>
-              <NavLink to="/users">User List</NavLink>
-            </li>
-            <li>
-              <NavLink to="/users/create">Create User</NavLink>
-            </li>
-            <li>
-              <NavLink to="/employees">Employee List</NavLink>
-            </li>
-            <li>
-              <NavLink to="/employees/create">Create Employee</NavLink>
-            </li>
-          </ul>
-        </nav>
         <Routes>
+          <Route path="/" element={<Navigate to={isAuthenticated ? '/home' : '/login'} />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/users" exact element={<UserList />} />
           <Route path="/users/create" element={<UserForm />} />
           <Route path="/employees" exact element={<EmployeeList />} />
