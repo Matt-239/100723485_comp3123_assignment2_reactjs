@@ -5,6 +5,10 @@ import UserForm from './components/UserForm';
 import EmployeeList from './components/EmployeeList';
 import EmployeeForm from './components/EmployeeForm';
 import EmployeeDetail from './components/EmployeeDetail';
+import Login from './components/Login';
+import Signup from './components/Signup';
+import { Navigate } from 'react-router-dom';
+
 import './App.css'; 
 
 function App() {
