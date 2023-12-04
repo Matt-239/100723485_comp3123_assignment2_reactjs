@@ -19,11 +19,11 @@ const UserList = () => {
   return (
     <div className="list">
       <h2>User List</h2>
-      {users.length === 0 ? (
+      {users?.length === 0 ? (
         <p>No users to display.</p>
       ) : (
         <ul>
-          {users && users.map(user => (
+          {users?.map(user => (
             <li className="list-item" key={user._id}>
               <strong>{user.username}</strong>
               <span>Email: {user.email}</span>
