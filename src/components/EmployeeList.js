@@ -23,7 +23,7 @@ const EmployeeList = () => {
         <p>No employees to display.</p>
       ) : (
         <ul>
-          {employees.map(employee => (
+          {employees && employees.map(employee => (
             <li className="list-item" key={employee._id}>
               <strong>{employee.firstName} {employee.lastName}</strong>
               <span>Email: {employee.email}</span>

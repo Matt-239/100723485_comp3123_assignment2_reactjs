@@ -23,7 +23,7 @@ const UserList = () => {
         <p>No users to display.</p>
       ) : (
         <ul>
-          {users.map(user => (
+          {users && users.map(user => (
             <li className="list-item" key={user._id}>
               <strong>{user.username}</strong>
               <span>Email: {user.email}</span>
