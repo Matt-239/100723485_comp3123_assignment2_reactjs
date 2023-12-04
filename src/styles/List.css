@@ -1,0 +1,31 @@
+.list {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px auto;
+    background-color: #fff;
+}
+
+.list-item {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.list-item:last-child {
+    border-bottom: none;
+}
+
+.list-item strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.list-item span {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}

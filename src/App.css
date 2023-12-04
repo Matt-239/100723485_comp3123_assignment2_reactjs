@@ -32,7 +32,42 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+nav {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-left h1 {
+  margin: 0;
+  color: black;
+}
+
+.navbar-right {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-right li {
+  margin-right: 20px;
+}
+
+NavLink {
+  text-decoration: none;
+  color: black;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+NavLink.active {
+  background-color: black;
 }
