@@ -10,13 +10,16 @@ import Signup from './components/Signup';
 import { Navigate } from 'react-router-dom';
 
 import './App.css'; 
+import NavBar from './components/NavBar';
 
 function App() {
   const isAuthenticated = false;
 
   return (
+    
     <Router>
       <div>
+      <NavBar />
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
