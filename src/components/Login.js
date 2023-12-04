@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
+import '../styles/Login.css'; // Import the stylesheet
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -21,38 +23,42 @@ const Login = () => {
     axios.post('/api/user/login', formData)
       .then(response => {
         console.log('User authenticated successfully:', response.data);
+        // Handle success, e.g., redirect or show a success message
       })
       .catch(error => {
         console.error('Error authenticating user:', error);
+        // Handle error, e.g., show an error message
       });
   };
 
   return (
-    <div>
+    <div className="login-container">
       <h2>Login</h2>
       <form onSubmit={handleLogin}>
-        <label>
-          Username:
+        <div className="form-group">
+          <label className="label">Username:</label>
           <input
             type="text"
             name="username"
             value={formData.username}
             onChange={handleInputChange}
+            className="input"
           />
-        </label>
-        <br />
-        <label>
-          Password:
+        </div>
+        <div className="form-group">
+          <label className="label">Password:</label>
           <input
             type="password"
             name="password"
             value={formData.password}
             onChange={handleInputChange}
+            className="input"
           />
-        </label>
-        <br />
-        <button type="submit">Login</button>
+        </div>
+        <button type="submit" className="login-button">Login</button>
       </form>
+
+       <p>Don't have an account? <Link to="/signup">Signup</Link></p>
     </div>
   );
 };
