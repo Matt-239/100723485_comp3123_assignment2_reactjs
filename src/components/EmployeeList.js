@@ -19,16 +19,20 @@ const EmployeeList = () => {
   return (
     <div className="list">
       <h2>Employee List</h2>
-      <ul>
-        {employees.map(employee => (
-          <li className="list-item" key={employee._id}>
-            <strong>{employee.firstName} {employee.lastName}</strong>
-            <span>Email: {employee.email}</span>
-            <span>Gender: {employee.gender}</span>
-            <span>Salary: ${employee.salary}</span>
-          </li>
-        ))}
-      </ul>
+      {employees.length === 0 ? (
+        <p>No employees to display.</p>
+      ) : (
+        <ul>
+          {employees.map(employee => (
+            <li className="list-item" key={employee._id}>
+              <strong>{employee.firstName} {employee.lastName}</strong>
+              <span>Email: {employee.email}</span>
+              <span>Gender: {employee.gender}</span>
+              <span>Salary: ${employee.salary}</span>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
