@@ -14,7 +14,7 @@ function App() {
     <Router>
       <div>
         <Routes>
-          <Route path="/" element={<Navigate to={isAuthenticated ? '/home' : '/login'} />} />
+          <Route path="/" element={<Navigate to={isAuthenticated ? '/users' : '/login'} />} />
           <Route path="/" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/users" exact element={<UserList />} />
