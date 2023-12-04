@@ -39,35 +39,30 @@
 }
 
 nav {
-  background-color: white;
+  background-color: #333;
   padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-.navbar-left h1 {
+ul {
+  list-style-type: none;
   margin: 0;
-  color: black;
-}
-
-.navbar-right {
-  list-style: none;
   padding: 0;
   display: flex;
 }
 
-.navbar-right li {
-  margin-right: 20px;
+li {
+  margin-right: 15px;
 }
 
 NavLink {
   text-decoration: none;
-  color: black;
-  padding: 8px;
-  border-radius: 4px;
+  color: #fff;
 }
 
-NavLink.active {
-  background-color: black;
+NavLink:hover {
+  color: #ccc;
+}
+
+.active {
+  font-weight: bold;
 }
